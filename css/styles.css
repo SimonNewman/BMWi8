@@ -60,6 +60,10 @@ h1,h2,h3,h4,h5,h6 {
   color: #038DDD;
 }
 
+h2.protonic {
+  color: #222;
+}
+
 .slider-content {
   bottom: 40px;
   left: 35px;

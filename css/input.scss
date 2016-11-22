@@ -1,0 +1,372 @@
+$blue: #038DDD;
+$dark: #111;
+$dark-grey: #333;
+$light: #EEE;
+$red: #FF3C1D;
+$protonic: #222;
+
+$sans-serif: "Roboto", sans-serif;
+$serif: "Roboto Slab", sans-serif;
+$navigation-font: Oswald, sans-serif;
+
+@mixin xs {
+  @media (max-width: 599px) { @content; }
+}
+@mixin sm {
+  @media (min-width: 600px) { @content; }
+}
+@mixin md {
+  @media (min-width: 900px) { @content; }
+}
+@mixin lg {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin xl {
+  @media (min-width: 1800px) { @content; }
+}
+
+body {
+  font-family: $sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  background: $dark;
+  padding-bottom: 100px;
+}
+
+@include xl {
+  .container-fluid.custom {
+    width: 80%;
+  }
+}
+
+a {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.section {
+  padding: 30px 0 50px 0;
+  background: $light;
+  .div {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  p {
+    padding-top: 20px;
+  }
+  img {
+    margin: 30px 0;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 300;
+  font-family: $serif;
+  color: $blue;
+}
+
+h2.protonic {
+  color: $protonic;
+}
+
+.slider-content {
+  bottom: 40px;
+  left: 35px;
+  position: absolute;
+}
+
+.slider {
+  position: relative;
+  background-image: url("../images/bg4.jpg");
+  background-size: contain;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  transition: background-image 1.25s linear;
+  h1 {
+    margin-top: 60px;
+    margin-bottom: 0;
+    color: #038DDD;
+    background: rgba(0,0,0,0.9);
+    padding: 7px 10px;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: 2em;
+    @include lg {
+      font-size: 3em;
+    }
+  }
+  h2 {
+    margin-top: 3px;
+    background: rgba(0,0,0,0.9);
+    padding: 7px 10px;
+    display: inline-block;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.5em;
+    @include lg {
+      font-size: 2em;
+    }
+  }
+  @include xs {
+    h1, h2 {
+      display: none;
+    }
+  }
+  @include sm {
+    h1, h2 {
+      display: none;
+    }
+  }
+}
+
+.header {
+  height: 0;
+  /*padding-bottom: 52%;*/
+  img.logo {
+    height: 50px;
+    margin: 20px 40px;
+  }
+}
+
+ul.navigation {
+  margin: 0 20px 0 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.2em;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  li {
+    display: inline;
+    line-height :50px;
+    margin: 0 6px;
+    text-transform: uppercase;
+    font-family: $navigation-font;
+    a {
+      color: $dark-grey;
+      padding: 2px 8px;
+      border: 2px solid transparent;
+    }
+    a:hover, ul.navigation li a:focus {
+      text-decoration: none;
+      border: 2px $dark-grey solid!important;
+    }
+  }
+  li.select a {
+    border: 2px solid transparent;
+    color: $dark-grey;
+    background: url("../images/i-black.png") no-repeat;
+    background-size: 15px 15px;
+    background-position: 9px 9px;
+    padding-left: 32px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  ul.navigation {
+    text-align: right;
+  }
+  ul.navigation li {
+    line-height: 100px;
+  }
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.picture {
+  background-size: cover;
+  width: 100%;
+  background-position: 50% 50%;
+  padding-bottom: 66%;
+  overflow: hidden;
+}
+
+/* box */
+
+.box {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .picture {
+    -webkit-transition: transform 1.5s ease;
+    -moz-transition: transform 1.5s ease;
+    -ms-transition: transform 1.5s ease;
+    -o-transition: transform 1.5s ease;
+    transition: transform 1.5s ease;
+  }
+  .content {
+    bottom: 0;
+    color: #fff;
+    height: 100%;
+    position: absolute;
+    width: 101%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    background: rgba(0,0,0,0.2);
+    h1 {
+      font-size: 30px;
+      margin-bottom: 25px;
+      font-weight: 500;
+      letter-spacing: 0.05px;
+      color: #fff;
+    }
+  }
+  .text {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    font-weight: 300;
+    bottom: -80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 0 20px 30px 20px;
+    span {
+      -webkit-transition: opacity 1.5s linear;
+      -moz-transition: opacity 1.5s linear;
+      -ms-transition: opacity 1.5s linear;
+      -o-transition: opacity 1.5s linear;
+      transition: opacity 1.5s linear;
+      opacity: 0;
+    }
+  }
+}
+
+.box:hover {
+  .picture {
+    -moz-transform: scale(1.3) translate3d( 0, 0, 0);
+    -webkit-transform: scale(1.3) translate3d( 0, 0, 0);
+    -o-transform: scale(1.3) translate3d( 0, 0, 0);
+    -ms-transform: scale(1.3) translate3d( 0, 0, 0);
+    transform: scale(1.3) translate3d( 0, 0, 0);
+  }
+  .text {
+    bottom: 0;
+    span {
+      opacity: 1;
+    }
+  }
+  .content {
+    background: rgba(0,0,0,0.8);
+  }
+}
+
+/* End of Box */
+
+.interior {
+  background-image: url("../images/interior3.jpg");
+  background-size: cover;
+  background-position: 70% 0;
+  color: $light;
+  margin: 50px 0;
+  padding: 50px;
+}
+
+.interior h1 {
+  border: #038DDD 5px solid;
+  display: inline-block;
+  font-weight: 500;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.interior span {
+  display: block;
+  color: #038DDD;
+  font-weight: 500;
+  font-size: 0.6em;
+  margin-top: 10px;
+}
+
+.interior p {
+  font-size: 1.1em;
+  line-height: 1.4em;
+  font-weight: 300;
+  margin-top: 30px;
+  letter-spacing: 0.5px;
+}
+
+.interior button {
+  padding: 10px 15px;
+  margin-top: 30px;
+  border-radius: 0;
+  background: none;
+  color: $light;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid #aaa;
+}
+
+.interior button:hover, .interior button:focus {
+  background: $blue;
+  border-color: $blue;
+  color: $light;
+}
+
+*:focus,
+*:active:focus,
+*.active:focus {
+  outline: none!important;
+  outline-style: none;
+  box-shadow: none;
+}
+
+.img-responsive.img-full {
+  width: 100%;
+}
+
+.featuresPicture {
+  position: relative;
+}
+
+.featuresPicture .feature {
+  position: absolute;
+}
+
+.featuresPicture .feature .circle {
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-color: $blue;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.featuresPicture .feature .content {
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  width: 600px;
+  background: rgba(0,0,0,0.8);
+  padding: 20px 25px;
+  color: rgba(255,255,255,0.7);
+  border: 5px solid $light;
+  display: none;
+}
+
+.featuresPicture .feature .content .title {
+  margin: 0 0 10px 0;
+}
