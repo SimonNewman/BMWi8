@@ -91,7 +91,7 @@ h2.protonic {
     color: #038DDD;
     background: rgba(0,0,0,0.9);
     padding: 7px 10px;
-    display: inline-block;
+    display: none;
     letter-spacing: 1px;
     font-size: 2em;
     @include lg {
@@ -102,7 +102,7 @@ h2.protonic {
     margin-top: 3px;
     background: rgba(0,0,0,0.9);
     padding: 7px 10px;
-    display: inline-block;
+    display: none;
     color: #fff;
     letter-spacing: 1px;
     font-size: 1.5em;
@@ -110,14 +110,9 @@ h2.protonic {
       font-size: 2em;
     }
   }
-  @include xs {
+  @include md {
     h1, h2 {
-      display: none;
-    }
-  }
-  @include sm {
-    h1, h2 {
-      display: none;
+      display: inline-block;
     }
   }
 }
