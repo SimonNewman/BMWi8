@@ -5,6 +5,9 @@ function resize(width, height, className){
 function resizeAll() {
   resize(1920, 981, ".slider");
   resize(1270, 420, ".interior");
+  /*var pictureHeight = $(".picture").css("height");
+  $(".text").css("height", pictureHeight);*/
+  //$(".text").css("bottom", pictureHeight - 80);
 }
 
 $(window).resize(function(){

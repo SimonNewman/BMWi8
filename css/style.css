@@ -45,7 +45,8 @@ h2.protonic {
   background-size: contain;
   background-position: 100% 0;
   background-repeat: no-repeat;
-  transition: background-image 1.25s linear; }
+  transition: background-image 1.25s linear;
+  overflow: hidden; }
   .slider h1 {
     margin-top: 60px;
     margin-bottom: 0;
@@ -90,16 +91,21 @@ ul.navigation {
   ul.navigation li {
     display: inline;
     line-height: 50px;
-    margin: 0 6px;
+    margin: 0;
     text-transform: uppercase;
     font-family: Oswald, sans-serif; }
     ul.navigation li a {
       color: #333;
-      padding: 2px 8px;
-      border: 2px solid transparent; }
+      padding: 2px; }
+      @media (min-width: 900px) {
+        ul.navigation li a {
+          padding: 2px 8px;
+          border: 2px solid transparent; } }
     ul.navigation li a:hover, ul.navigation li ul.navigation li a:focus {
-      text-decoration: none;
-      border: 2px #333 solid !important; }
+      text-decoration: none; }
+      @media (min-width: 900px) {
+        ul.navigation li a:hover, ul.navigation li ul.navigation li a:focus {
+          border: 2px #333 solid !important; } }
   ul.navigation li.select a {
     border: 2px solid transparent;
     color: #333;
@@ -108,12 +114,21 @@ ul.navigation {
     background-position: 9px 9px;
     padding-left: 32px; }
 
+/*
 @media (min-width: 768px) {
   ul.navigation {
-    text-align: right; }
-
+    text-align: right;
+  }
   ul.navigation li {
-    line-height: 100px; } }
+    line-height: 100px;
+  }
+}
+*/
+ul.navigation {
+  text-align: right; }
+  ul.navigation li {
+    line-height: 100px; }
+
 .no-padding {
   padding: 0; }
 
