@@ -14,6 +14,9 @@ $(window).resize(function(){
   resizeAll();
 });
 
+(new Image()).src = "images/bg4.jpg";
+(new Image()).src = "images/bg2.jpg";
+
 $(function(){
   resizeAll();
 });
